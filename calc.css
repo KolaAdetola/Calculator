@@ -1,9 +1,9 @@
 .calc-body{
-    width: 300px;
-    height: 450px;
+    width: 600px;
+    /* height: 500px; */
     background-color: black;
     padding: 10px;
-    margin-left: 500px;
+    margin-left: 400px;
     border-radius: 10px;
     color: white;
     font-size: 20px;
@@ -15,9 +15,10 @@
     background-color: rgb(37, 37, 37);
     padding: 10px;
     margin: 10px;
+    width: 500px;height: 60px;
     border-radius: 10px;
     color: white;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: bold;
     text-align: end;
 }
@@ -28,12 +29,12 @@
 }
  button{
     background-color: rgb(37, 37, 37);
-    width: 50px; height: 50px;
+    width: 100px; height: 100px;
     padding: 10px;
     margin: 10px;
     border-radius: 50%;
     color: white;
-    font-size: 20px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     border: none;
