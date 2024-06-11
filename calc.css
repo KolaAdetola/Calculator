@@ -11,7 +11,7 @@
     text-align: center;
 
 }
-.calc-display{
+#display{
     background-color: rgb(37, 37, 37);
     padding: 10px;
     margin: 10px;
@@ -19,7 +19,7 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
+    text-align: end;
 }
 .calc-rows{
     display: grid;
@@ -42,6 +42,12 @@
     background-color: orange;
     color: white;
 }
+.operations:active{
+    background-color: rgb(248, 181, 57);
+}
+/* .operations:hover{
+    background-color: rgb(218, 141, 0); */
+/* } */
 .last-row{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -49,6 +55,9 @@
 }
 .opps{
     background-color: gray;
+}
+.opps:active{
+    background-color: rgb(223, 199, 199);
 }
 .calc-display-value{
     text-align: end;

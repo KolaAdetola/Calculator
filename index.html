@@ -10,36 +10,35 @@
     <!-- Calculator Body -->
 <div class="calc-body">
 
-    <div class="calc-display">
-        <div class="calc-operations"></div>
-        <div class="calc-display-value">0</div>
-    </div>
+    <input id="display" readonly>
+    <!-- <div class="calc-display">
+    </div> -->
     <div class="calc-keys">
         <div class="calc-rows">
             
-            <button class="opps">AC</button>
-            <button class="opps">%</button>
-            <button class="opps">&#43;&#47;&#8722;</button>
-            <button class="operations">&#247;</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operations">&#215;</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operations" id="minus">-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="operations" id="add">+</button>
+            <button class="opps" onclick="clearDisplay()">AC</button>
+            <button class="opps" onclick="appendToDisplay('/100')">%</button>
+            <button class="opps" onclick="appendToDisplay('-')">&#43;&#47;&#8722;</button>
+            <button class="operations" onclick="appendToDisplay('/')">&#247;</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operations" onclick="appendToDisplay('*')">&#215;</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operations" id="minus" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operations" id="add" onclick="appendToDisplay('+')">+</button>
         </div>
         <div class="last-row">
 
-            <button>0</button>
-            <button>E</button>
-            <button class="operations">.</button>
-            <button class="operations">=</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('*10**')">E</button>
+            <button class="operations" onclick="appendToDisplay('.')">.</button>
+            <button class="operations" onclick="calculate()">=</button>
         </div>
     </div>
 </div>
