@@ -1,43 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+}
 .calc-body{
-    width: 600px;
-    height: 725px;
+    /* display:flex;
+    justify-content:center;
+    align-items:center;
+    align-content:center; */
+    width: 98%;
+    /* height: 99vh;  */
     background-color: black;
     padding: 10px;
-    margin-left: 400px;
+    /* margin-left: 400px; */
     border-radius: 10px;
     color: white;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-
+}
+.last-row{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* margin-top:-50px; */
+    margin: 10px;
 }
 #display{
     background-color: rgb(37, 37, 37);
-    padding: 10px;
-    margin: 10px;
-    width: 500px;height: 60px;
+    /* padding: 10px; */
+    /* margin: 10px; */
+    width: 950px;height: 30vh;
     border-radius: 10px;
     color: white;
-    font-size: 50px;
+    font-size: 100px;
     font-weight: bold;
     text-align: end;
+    /* top: 10px; */
 }
 .calc-rows{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     /* grid-template-rows: 25% 25% 25% 25%; */
+    /* padding-top:400px; */
+    /* margin: 30px; */
 }
- button{
+button{
     background-color: rgb(37, 37, 37);
-    width: 100px; height: 100px;
+    width: 200px; height: 200px;
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     border-radius: 50%;
     color: white;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: bold;
     text-align: center;
-    border: none;
+    border:none;
 }
 .operations{
     background-color: orange;
@@ -63,33 +79,4 @@
 .calc-display-value{
     text-align: end;
 }
-[class*="col-"]{
-    width: 100%;
-}
-@media only screen and (min-width:350px){
-    .col-1{width: 8.33%;}
-    .col-2{width: 16.66%;}
-    .col-3{width: 25%;}
-    .col-4{width: 33.33%;}
-    .col-5{width: 41.66%;}
-    .col-6{width: 50%;}
-    .col-7{width: 58.33%;}
-    .col-8{width: 66.66%;}
-    .col-9{width: 75%;}
-    .col-10{width: 83.33%;}
-    .col-11{width: 91.66%;}
-    .col-12{width: 100%;height: 200%;}
-}
-
-@media only screen and (max-width:350px){
-    body{
-        background-color:blue;
-        height: 800px;
-        margin: none;
-        /* display: flex; */
-        
-    }
-    .calc-body{
-        height: 800px;
-    }
-}
+  

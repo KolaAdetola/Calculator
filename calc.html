@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="class.js" defer></script>
+  <title>jQuery Calculator (Teaching File)</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{display:flex;align-items:center;justify-content:center;height:100vh;background:#f3f4f6;margin:0}
+    .calculator{width:320px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:16px}
+    #display{width:100%;height:56px;font-size:24px;padding:8px 12px;border-radius:8px;border:1px solid #e5e7eb;text-align:right;box-sizing:border-box}
+    .buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+    button{height:52px;font-size:18px;border-radius:8px;border:0;background:#eef2ff;cursor:pointer}
+    button.op{background:#fde68a}
+    button.equals{background:#60a5fa;color:#fff}
+    button.clear{background:#fca5a5}
+    button:active{transform:translateY(1px)}
+    .muted{font-size:12px;color:#6b7280;margin-top:8px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="calculator" role="application" aria-label="Calculator">
+    <input id="display" type="text" aria-label="Calculator display" readonly />
+
+    <div class="buttons" role="group" aria-label="Calculator buttons">
+      <button class="num" onclick="updateDisplay('7')">7</button>
+      <button class="num" onclick="updateDisplay('8')">8</button>
+      <button class="num" onclick="updateDisplay('9')">9</button>
+      <button class="op" onclick="updateDisplay('/')">/</button>
+
+      <button class="num" onclick="updateDisplay('4')">4</button>
+      <button class="num" onclick="updateDisplay('5')">5</button>
+      <button class="num" onclick="updateDisplay('6')">6</button>
+      <button class="op" onclick="updateDisplay('*')">*</button>
+
+      <button class="num" onclick="updateDisplay('1')">1</button>
+      <button class="num" onclick="updateDisplay('2')">2</button>
+      <button class="num" onclick="updateDisplay('3')">3</button>
+      <button class="op" onclick="updateDisplay('-')">-</button>
+
+      <button class="num" onclick="updateDisplay('0')">0</button>
+      <button class="dot" onclick="updateDisplay('.')">.</button>
+      <button id="back" onclick="handleBackspace()">⌫</button>
+      <button class="op" onclick="updateDisplay('+')">+</button>
+
+      <button id="clear" class="clear" onclick="clearDisplay()">C</button>
+      <button id="percent" class="op" onclick="updateDisplay('/100')">%</button>
+      <button id="equals" class="equals" onclick="calculate()">=</button>
+      <button id="noop" aria-hidden="true" style="visibility:hidden">.</button>
+    </div>
+
+    <div class="muted">Tip: You can also use keyboard numbers and + - * / Enter for equals</div>
+  </div>
+</body>
+</html>

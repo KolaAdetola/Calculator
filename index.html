@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <title>Calculator</title>
     <link href="calc.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
     <script defer src="calc.js"></script>
 </head>
 <body>
     <!-- Calculator Body -->
-<div class="calc-body">
+<div class="calc-body ">
 
-    <input id="display" readonly>
+    <input id="display" readonly class="">
     <!-- <div class="calc-display">
     </div> -->
     <div class="calc-keys">
-        <div class="calc-rows">
+        <div class="calc-rows col-12">
             
             <button class="opps" onclick="clearDisplay()">AC</button>
             <button class="opps" onclick="appendToDisplay('/100')">%</button>
@@ -32,9 +33,6 @@
             <button onclick="appendToDisplay('2')">2</button>
             <button onclick="appendToDisplay('3')">3</button>
             <button class="operations" id="add" onclick="appendToDisplay('+')">+</button>
-        </div>
-        <div class="last-row">
-
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('*10**')">E</button>
             <button class="operations" onclick="appendToDisplay('.')">.</button>
